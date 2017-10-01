@@ -22,7 +22,7 @@
         android:hint="Username"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="49dp" />
+        tools:layout_editor_absoluteY="47dp" />
 
     <EditText
         android:id="@+id/etPassword"
