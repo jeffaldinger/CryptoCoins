@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.widget.ProgressBar;
 
 public class LoginActivity extends AppCompatActivity{
 
@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity{
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
         final Button bSignIn = (Button) findViewById(R.id.bSignIn);
         final TextView registerLink = (TextView) findViewById(R.id.tvRegister);
+        //final ProgressBar spinner = (ProgressBar)findViewById(R.id.progressBar);
 
         registerLink.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -28,7 +29,10 @@ public class LoginActivity extends AppCompatActivity{
                 Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
             }
-        });
+        }
+
+        //loginLink.setOnClickListener()
+        );
 
     }}
 
