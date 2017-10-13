@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.cryptocoins.UserAreaActivity">
+    tools:context="com.example.cryptocoins.UserAreaActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -17,9 +19,29 @@
         android:textColor="@android:color/holo_green_dark"
         android:textSize="24sp"
         android:textStyle="bold"
+        tools:layout_editor_absoluteY="106dp"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="338dp"
+        android:layout_height="188dp"
+        android:id="@+id/graph"
+        app:seriesColor="#85bb65"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        android:layout_marginRight="8dp"
+        app:layout_constraintVertical_bias="0.723"
+        app:layout_constraintHorizontal_bias="0.605" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="0dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>
