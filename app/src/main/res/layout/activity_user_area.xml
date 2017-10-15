@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#373B41"
     tools:context="com.example.cryptocoins.UserAreaActivity"
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
@@ -31,7 +32,7 @@
         android:layout_width="338dp"
         android:layout_height="188dp"
         android:id="@+id/graph"
-        app:seriesColor="#85bb65"
+        app:seriesColor="#1ec503"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

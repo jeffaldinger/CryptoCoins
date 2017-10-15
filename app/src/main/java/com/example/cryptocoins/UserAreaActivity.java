@@ -1,5 +1,6 @@
 package com.example.cryptocoins;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -29,6 +30,7 @@ public class UserAreaActivity extends AppCompatActivity {
                 new DataPoint(4, 6)
         });
         graph.addSeries(series);
+        series.setColor(Color.rgb(30, 197, 3));
 
     }
 
