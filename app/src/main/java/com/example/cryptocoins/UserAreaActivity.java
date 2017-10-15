@@ -2,6 +2,7 @@ package com.example.cryptocoins;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -14,6 +15,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Home");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
         final TextView tvWelcome = (TextView) findViewById(R.id.tvWelcome);
@@ -28,6 +30,12 @@ public class UserAreaActivity extends AppCompatActivity {
         });
         graph.addSeries(series);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_user_area, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
 }
