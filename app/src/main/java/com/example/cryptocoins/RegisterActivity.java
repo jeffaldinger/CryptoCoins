@@ -1,7 +1,7 @@
 package com.example.cryptocoins;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
+import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +15,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.android.volley.toolbox.Volley.newRequestQueue;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -69,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity {
                 };
 
                 RegisterRequest registerRequest = new RegisterRequest(first_name, last_name, email, username, password, responseListener);
-                RequestQueue queue = newRequestQueue(RegisterActivity.this);
+                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);
             }
 
