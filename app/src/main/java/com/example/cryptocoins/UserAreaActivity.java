@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.GridLabelRenderer;
 
 public class UserAreaActivity extends AppCompatActivity {
 
@@ -19,9 +20,9 @@ public class UserAreaActivity extends AppCompatActivity {
         setTitle("Home");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
-        final TextView tvWelcome = (TextView) findViewById(R.id.tvWelcome);
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
+        GridLabelRenderer gridLabelRenderer = graph.getGridLabelRenderer();
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
@@ -31,6 +32,7 @@ public class UserAreaActivity extends AppCompatActivity {
         });
         graph.addSeries(series);
         series.setColor(Color.rgb(30, 197, 3));
+        graph.getGridLabelRenderer().setGridColor(Color.rgb(110,143,128));
 
     }
 

@@ -22,6 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        setTitle("Please Enter Your Information:");
         final EditText etFirstName = (EditText) findViewById(R.id.etFirstName);
         final EditText etLastName = (EditText) findViewById(R.id.etLastName);
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
