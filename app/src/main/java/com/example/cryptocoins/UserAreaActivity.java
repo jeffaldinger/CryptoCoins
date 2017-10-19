@@ -11,6 +11,7 @@ import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.GridLabelRenderer;
 
+
 public class UserAreaActivity extends AppCompatActivity {
 
     LineGraphSeries<DataPoint>series;
@@ -33,6 +34,8 @@ public class UserAreaActivity extends AppCompatActivity {
         graph.addSeries(series);
         series.setColor(Color.rgb(30, 197, 3));
         graph.getGridLabelRenderer().setGridColor(Color.rgb(110,143,128));
+        graph.getGridLabelRenderer().setVerticalLabelsColor(Color.rgb(110,143,128));
+        graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.rgb(110,143,128));
 
     }
 

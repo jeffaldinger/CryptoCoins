@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#282A2E"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="266dp"
+        android:layout_height="500dp"
+        android:textAlignment="center"
+        android:width="50dp"
+        android:height="300dp"
+        android:fadeScrollbars="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:text="Created by Yazeed Aldalbahi, Jeff Aldinger, Jon-Paul Deshaies, and Wilkins Soto, we are four university students who saw the potential future of cryptocurrencies. We believe that the future of blockchain technology is on the verge of exploding in the current market. We want to help early adopters take advantage of the financial gains that have are ever-increasing. Understanding the volatility of the market, we aim to allow users to choose between high and low risk investments to stake their money. However, the volatile nature of the market means that most are hesitant to invest large sums of money, and this is where Crypton comes in. The ease of use and ability to play with low sums of money in the market is not only fun but has the possibility of having a great return on investment.
+Past performance is not indicative of future results. Any investment in blockchain assets involves the risk of loss of part or all of your investment. The value of the blockchain assets you exchange is subject to market and other investment risks. We are not responsible for the loss of any assets.
+"
+        android:textColor="#06F000"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

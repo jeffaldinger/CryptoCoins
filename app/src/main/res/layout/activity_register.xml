@@ -151,7 +151,9 @@
         android:layout_below="@+id/bSignUp"
         android:layout_marginTop="10dp"
         android:checked="true"
+        android:fontFamily="monospace"
         android:text="I agree to the terms of service"
+        android:textSize="12sp"
         android:textColor="#06F000"
         android:textStyle="italic" />
 
@@ -162,8 +164,10 @@
         android:layout_below="@+id/cbTerms"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
         android:text="Terms of Service "
         android:textAlignment="textStart"
+        android:layout_gravity="start"
         android:textColor="#06F011"
         android:textStyle="bold" />
 </RelativeLayout>

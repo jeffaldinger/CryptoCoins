@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".UserAreaActivity">
 
     <item
-        android:id="@+id/action_bar"
+        android:id="@+id/settings"
         android:icon="@drawable/ic_settings_black_24dp"
         android:title=""
         app:showAsAction="always"/>

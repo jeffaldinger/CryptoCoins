@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".LoginActivity">
 
     <item
-        android:id="@+id/action_bar"
+        android:id="@+id/about"
         android:icon="@drawable/ic_info_black_24dp"
         android:title=""
         app:showAsAction="always"/>
