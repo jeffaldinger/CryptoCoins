@@ -7,5 +7,14 @@
         <item name="colorPrimaryDark">#373B41</item> //Bar that shows battery, time, etc
         <item name="colorAccent">#06F000</item> //text accent
     </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme.Popup" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="colorPrimary">#373B41</item> //Action Bar Background color
+        <item name="colorPrimaryDark">#373B41</item> //Bar that shows battery, time, etc
+        <item name="colorAccent">#06F000</item> //text accent
+
+    </style>
 
 </resources>

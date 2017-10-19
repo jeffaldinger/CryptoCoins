@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".UserAreaActivity" ></activity>
+        <activity android:name=".TermsOfService"
+            android:theme="@style/AppTheme.Popup" />
+        <activity android:name=".UserAreaActivity" />
     </application>
 
 </manifest>

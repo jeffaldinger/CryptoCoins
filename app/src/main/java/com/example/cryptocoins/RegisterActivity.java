@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -30,8 +31,16 @@ public class RegisterActivity extends AppCompatActivity {
         final EditText etConfirmPassword = (EditText) findViewById(R.id.etConfirmPassword);
         final EditText etEmail = (EditText) findViewById(R.id.etEmail);
         final EditText etConfirmEmail = (EditText) findViewById(R.id.etConfirmEmail);
-
+        final TextView termsLink = (TextView) findViewById(R.id.tvTerms);
         final Button bSignUp = (Button) findViewById(R.id.bSignUp);
+
+        termsLink.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent termsIntent = new Intent(RegisterActivity.this, TermsOfService.class);
+                RegisterActivity.this.startActivity(termsIntent);
+            }
+        });
 
         bSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
