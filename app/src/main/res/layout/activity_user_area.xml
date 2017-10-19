@@ -9,25 +9,6 @@
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="388dp"
-        android:layout_height="45dp"
-        android:text="Welcome to Crypton"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#06F000"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintVertical_bias="0.05" />
-
     <com.jjoe64.graphview.GraphView
         android:layout_width="338dp"
         android:layout_height="188dp"
@@ -36,7 +17,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
         android:layout_marginRight="8dp"
         app:layout_constraintVertical_bias="0.724"
         app:layout_constraintHorizontal_bias="0.605"

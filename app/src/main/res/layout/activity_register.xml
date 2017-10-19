@@ -118,7 +118,7 @@
         android:layout_height="wrap_content"
         android:background="#373B41"
         android:fontFamily="monospace"
-        android:text="Sign Up"
+        android:text="Register"
         android:textColor="#06F000"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
