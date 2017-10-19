@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity{
 
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final Button bSignIn = (Button) findViewById(R.id.bSignIn);
+        final Button loginLink = (Button) findViewById(R.id.bSignIn);
         final TextView registerLink = (TextView) findViewById(R.id.tvRegister);
         //final TextView loginLink = (TextView) findViewById(R.id.bSignIn);
         //final ProgressBar spinner = (ProgressBar)findViewById(R.id.progressBar);
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity{
             }
         });*/
 
-        bSignIn.setOnClickListener(new View.OnClickListener() {
+        loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final String username = etUsername.getText().toString();
@@ -64,10 +64,18 @@ public class LoginActivity extends AppCompatActivity{
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
+                                String first_name = jsonResponse.getString("first_name");
+                                String last_name = jsonResponse.getString("last_name"); //
+                                String email = jsonResponse.getString("email");
+                                int balance = jsonResponse.getInt("balance");
 
-                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                intent.putExtra("username", username);
-                                LoginActivity.this.startActivity(intent);
+                                Intent loginIntent = new Intent(LoginActivity.this, UserAreaActivity.class);
+                                loginIntent.putExtra("username", username);
+                                loginIntent.putExtra("balance", balance); //
+                                loginIntent.putExtra("first_name", first_name);
+                                loginIntent.putExtra("last_name", last_name);
+                                loginIntent.putExtra("email", email);
+                                LoginActivity.this.startActivity(loginIntent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("Login Failed")
