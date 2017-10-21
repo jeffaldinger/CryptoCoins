@@ -2,9 +2,9 @@ package com.example.cryptocoins;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
-
-
+import android.widget.TextView;
 
 public class TermsOfService extends AppCompatActivity {
     @Override
@@ -12,6 +12,8 @@ public class TermsOfService extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("Terms of Service");
         setContentView(R.layout.terms_of_service);
+        final TextView tvTOS = (TextView) findViewById(R.id.tvTOS);
+        tvTOS.setMovementMethod(new ScrollingMovementMethod());
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);

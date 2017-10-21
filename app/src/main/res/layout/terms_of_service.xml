@@ -3,26 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#282A2E">
+    android:background="#131616">
 
     <TextView
         android:id="@+id/tvTOS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="84dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
         android:width="200dp"
         android:height="300dp"
         android:fadeScrollbars="true"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:scrollbarAlwaysDrawVerticalTrack="true"
-        android:text="******This is where the terms of service will go,feel free to make changes to the dimensions of this box *****"
+        android:text="Last updated: 10/18/17\n\n\tPlease read these terms of service carefully before using the CryptoCoins mobile application operated by Crypton. Your access to and use of the service is conditioned on your acceptance of and compliance with these terms. These terms apply to all visitors, users and others who access or use the service. \n\n\t By accessing or using the service you agree to be bound by these terms. If you disagree with any part of the terms then you may not access the service.   \n\nTermination  \n\n\tWe may terminate or suspend access to our service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the terms. All provisions of the terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.  \n\nContent \n\n\t Our service allows you to invest in cryptocurrencies and pick between low, medium, or high risk portfolios. We want to help early adopters take advantage of the financial gains that are ever-increasing. Understanding the volatility of the market, we aim to allow users to choose between high and low risk investments to stake their money. However, the volatile nature of the market means that most are hesitant to invest large sums of money, and this is where Crypton comes in. The ease of use and ability to play with low sums of money in the market is not only fun but has the possibility of having a great return on investment. \n\n Links To Other Websites \n\n\t Our service may contain links to third-party websites or services that are not owned or controlled by Crypton. Crypton has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. You further acknowledge and agree that Crypton shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such websites or services.  \n\n Changes \n\n\t We reserve the right, at our sole discretion, to modify or replace these terms at any time. If a revision is material we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.  \n\n Contact Us \n\n\t If you have any questions about these terms, please contact us. "
         android:textColor="#06F000" />
 </RelativeLayout>
