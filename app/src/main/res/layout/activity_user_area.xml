@@ -35,7 +35,30 @@
         android:id="@+id/guideline2"
         app:layout_constraintGuide_begin="20dp"
         android:orientation="vertical" />
-</RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTextBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guideline"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="101dp"
+            android:text="Balance:"
+            android:textColor="#1ec503"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/balanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#1ec503"
+            android:textSize="36sp"
+            android:text="0.00 USD"
+            android:layout_below="@+id/tvTextBalance"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/menu_user_area"
         android:layout_width="wrap_content"
