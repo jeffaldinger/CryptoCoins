@@ -14,7 +14,7 @@ public class SettingsArea extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
-        setTitle("Settings Area");
+        setTitle("Settings");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_area);
 
