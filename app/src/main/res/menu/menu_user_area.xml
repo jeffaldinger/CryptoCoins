@@ -4,10 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".UserAreaActivity">
 
     <item
-        android:id="@+id/settings"
+        android:id="@+id/menu_settings"
         android:icon="@drawable/ic_settings_black_24dp"
-        android:title=""
-        app:showAsAction="always"/>
+        android:title="Settings" />
+    <item
+        android:id="@+id/menu_about_us"
+        android:icon="@drawable/ic_info_black_24dp"
+        android:title="About Us"/>
+    <item
+        android:id="@+id/menu_terms"
+        android:title="Terms of Service"/>
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Log Out"/>
 
 
 

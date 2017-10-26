@@ -6,16 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-/**
- * Created by JP on 10/15/17.
- */
+
 
 
 public class SettingsArea extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
         setTitle("Settings Area");
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_area);
 
         final Button IDLink = (Button) findViewById(R.id.WalletID);
@@ -27,6 +25,7 @@ public class SettingsArea extends AppCompatActivity {
                 SettingsArea.this.startActivity(IDIntent);
             }
         });
+
 
     }
 }
