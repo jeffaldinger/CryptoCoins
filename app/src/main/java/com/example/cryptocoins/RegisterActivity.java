@@ -60,27 +60,40 @@ public class RegisterActivity extends AppCompatActivity {
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
                 final String confirmPassword = etConfirmPassword.getText().toString();
+                //This is initializes the registry error builder
                 final AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                //This initializes the registry error string to empty
                 String errorString = "";
-
+                //If the passwords don't match, it adds a new line to the error string
                 if(!Objects.equals(password, confirmPassword)){
                     errorString+="The passwords don't match.\n";
                 }
+                //If the emails don't match, it adds a new line to the error string
                 if(!Objects.equals(email, confirmEmail)){
                     errorString+="The emails don't match.\n";
                 }
+                //If the TOS agreement box isn't checked, it adds a new line to the error string
                 if(!cbTerms.isChecked()){
                     errorString+="You must agree to the terms.\n";
                 }
+                //The error string is now put into a final variable so that it can be accessed in the
+                //new method below
                 final String finalErrorString = errorString;
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response){
                         try {
+                            //This looks for a response from JSON, from the php file, similar to how
+                            //it can look for a click of a button from a user.
                             JSONObject jsonResponse = new JSONObject(response);
+                            //The success boolean is in the php file and is true if connection to the
+                            //database is successful
                             boolean success = jsonResponse.getBoolean("success");
+                            //If it's not successful, but all other conditions are met, it will give a
+                            //generic error message. Otherwise, it will give the reasons why it failed,
+                            //which come from the errorstring which was created above.
                             if(!success | finalErrorString!=""){
-
+                                //This whole block of code is how to make a popup error/alert message
                                 builder.setMessage("Registry failed.\n"+ finalErrorString)
                                         .setNegativeButton("Retry",null)
                                         .create()
@@ -88,12 +101,14 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                             }else{
+                                //If everything is successful, and inputs verified, it will change to the
+                                //login page
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 RegisterActivity.this.startActivity(intent);
 
                             }
 
-
+                            //This try/catch block will catch a JSON error
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -101,8 +116,10 @@ public class RegisterActivity extends AppCompatActivity {
 
                     }
                 };
-
+                //This is where the RegisterRequest class comes in. It makes a new register request object
+                //and puts the registry input fields into it, including the response listener created above
                 RegisterRequest registerRequest = new RegisterRequest(first_name, last_name, email, username, password, responseListener);
+                //Makes a new queue for the registration, and adds the request to it.
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);
             }
