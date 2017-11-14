@@ -11,12 +11,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.GridLabelRenderer;
+
+import static android.R.id.message;
 
 
 public class UserAreaActivity extends AppCompatActivity {
@@ -38,7 +41,18 @@ public class UserAreaActivity extends AppCompatActivity {
         menuDrawerLayout.addDrawerListener(menuToggle);
         menuToggle.syncState();
 
+        Button toWallet = (Button) findViewById(R.id.buttonWallet);
+        toWallet.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View view) {
+
+                Intent walletIntent = new Intent(UserAreaActivity.this, WalletActivity.class);
+                startActivity(walletIntent);
+            }
+
+
+        });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

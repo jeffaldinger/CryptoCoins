@@ -7,6 +7,7 @@
     android:background="#282A2E"
     android:id="@+id/drawerLayout"
     tools:context="com.example.cryptocoins.UserAreaActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -20,21 +21,21 @@
             android:layout_marginTop="275dp"
             app:seriesColor="#1ec503" />
 
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="0dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
 
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
-        app:layout_constraintGuide_begin="20dp"
-        android:orientation="vertical" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
 
         <TextView
             android:id="@+id/tvTextBalance"
@@ -51,12 +52,25 @@
             android:id="@+id/balanceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="#1ec503"
-            android:textSize="36sp"
-            android:text="0.00 USD"
             android:layout_below="@+id/tvTextBalance"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="0.00 USD"
+            android:textColor="#1ec503"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/buttonWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/balanceValue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:onClick="sendMessage"
+            android:fontFamily="monospace"
+            android:background="#373B41"
+            android:textColor="#06F000"
+            android:text="Wallet" />
 
     </RelativeLayout>
     <android.support.design.widget.NavigationView

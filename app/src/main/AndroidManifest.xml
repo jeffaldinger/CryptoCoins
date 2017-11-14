@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.cryptocoins">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -22,12 +21,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".TermsOfService"
+        <activity
+            android:name=".TermsOfService"
             android:theme="@style/AppTheme.Popup" />
         <activity android:name=".UserAreaActivity" />
         <activity android:name=".AboutUs" />
-        <activity android:name=".SettingsArea"/>
-        <activity android:name=".Pop"></activity>
+        <activity android:name=".SettingsArea" />
+        <activity android:name=".Pop" />
+        <activity android:name=".WalletActivity" android:parentActivityName=".UserAreaActivity" > </activity>
     </application>
 
 </manifest>
