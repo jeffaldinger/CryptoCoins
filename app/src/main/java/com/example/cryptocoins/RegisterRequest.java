@@ -28,7 +28,7 @@ public class RegisterRequest extends StringRequest {
         params.put("password", password);
 
     }
-    
+
     @Override
     public Map<String, String> getParams() {
         return params;
