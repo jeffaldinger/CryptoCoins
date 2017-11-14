@@ -51,12 +51,12 @@
             android:id="@+id/balanceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textColor="#1ec503"
-            android:textSize="36sp"
-            android:text="0.00 USD"
             android:layout_below="@+id/tvTextBalance"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="0.00 USD"
+            android:textColor="#1ec503"
+            android:textSize="36sp" />
 
     </RelativeLayout>
     <android.support.design.widget.NavigationView
