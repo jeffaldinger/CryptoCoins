@@ -62,9 +62,11 @@ public class UserAreaActivity extends AppCompatActivity {
         //
         bitcoinValueList = new ArrayList<>();
 
+        new GetBitcoinValues().execute();
+        //
         Button toWallet = (Button) findViewById(R.id.buttonWallet);
         toWallet.setOnClickListener(new View.OnClickListener() {
-        new GetBitcoinValues().execute();
+
         //
 
             @Override
