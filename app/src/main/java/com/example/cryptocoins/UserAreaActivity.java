@@ -276,8 +276,8 @@ public class UserAreaActivity extends AppCompatActivity {
             Date d8 = calendar.getTime();
 
             GraphView homeGraph = (GraphView) findViewById(R.id.homeGraph);
-            homeGraph.setTitle("Value of Bitcoin (Week)");
-            homeGraph.setTitleTextSize(50);
+            homeGraph.setTitle("Value of Bitcoin (This Week)");
+            homeGraph.setTitleTextSize(64);
 
             GridLabelRenderer gridLabelRenderer = homeGraph.getGridLabelRenderer();
             gridLabelRenderer.setHorizontalAxisTitle("Days of the Week");
