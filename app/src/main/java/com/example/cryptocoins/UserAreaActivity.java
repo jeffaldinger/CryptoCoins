@@ -278,7 +278,7 @@ public class UserAreaActivity extends AppCompatActivity {
             GraphView homeGraph = (GraphView) findViewById(R.id.homeGraph);
             homeGraph.setTitle("Value of Bitcoin (This Week)");
             homeGraph.setTitleTextSize(64);
-
+            homeGraph.setTitleColor((Color.rgb(110,143,128)));
             GridLabelRenderer gridLabelRenderer = homeGraph.getGridLabelRenderer();
             gridLabelRenderer.setHorizontalAxisTitle("Days of the Week");
             gridLabelRenderer.setVerticalAxisTitle("USD");
@@ -287,7 +287,7 @@ public class UserAreaActivity extends AppCompatActivity {
             gridLabelRenderer.setHorizontalAxisTitleTextSize(64);
             gridLabelRenderer.setVerticalAxisTitleTextSize(64);
             gridLabelRenderer.setHorizontalLabelsVisible(true);
-            gridLabelRenderer.setNumHorizontalLabels(8);
+            gridLabelRenderer.setNumHorizontalLabels(7);
             LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
                     new DataPoint(d1, bitcoinValueList.get(0)),
                     new DataPoint(d2, bitcoinValueList.get(1)),
@@ -304,10 +304,11 @@ public class UserAreaActivity extends AppCompatActivity {
             homeGraph.getGridLabelRenderer().setVerticalLabelsColor(Color.rgb(110, 143, 128));
             homeGraph.getGridLabelRenderer().setHorizontalLabelsColor(Color.rgb(110, 143, 128));
             homeGraph.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(UserAreaActivity.this));
-            homeGraph.getGridLabelRenderer().setNumHorizontalLabels(8);
+            homeGraph.getGridLabelRenderer().setNumHorizontalLabels(7);
             homeGraph.getViewport().setMinX(d1.getTime());
             homeGraph.getViewport().setMaxX(d8.getTime());
             homeGraph.getViewport().setXAxisBoundsManual(true);
+            //homeGraph.getGridLabelRenderer().setHumanRounding(false);
 
         }
     }
