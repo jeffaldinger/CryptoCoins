@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.GridLabelRenderer;
@@ -34,6 +35,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Date;
+import java.util.Calendar;
 
 
 
@@ -254,7 +257,28 @@ public class UserAreaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
+
+            Calendar calendar = Calendar.getInstance();
+            Date d1 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d2 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d3 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d4 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d5 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d6 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d7 = calendar.getTime();
+            calendar.add(Calendar.DATE, 1);
+            Date d8 = calendar.getTime();
+
             GraphView homeGraph = (GraphView) findViewById(R.id.homeGraph);
+            homeGraph.setTitle("Value of Bitcoin (Week)");
+            homeGraph.setTitleTextSize(50);
+
             GridLabelRenderer gridLabelRenderer = homeGraph.getGridLabelRenderer();
             gridLabelRenderer.setHorizontalAxisTitle("Days of the Week");
             gridLabelRenderer.setVerticalAxisTitle("USD");
@@ -262,22 +286,29 @@ public class UserAreaActivity extends AppCompatActivity {
             gridLabelRenderer.setVerticalAxisTitleColor(Color.rgb(110,143,128));
             gridLabelRenderer.setHorizontalAxisTitleTextSize(64);
             gridLabelRenderer.setVerticalAxisTitleTextSize(64);
-            gridLabelRenderer.setHorizontalLabelsVisible(false);
+            gridLabelRenderer.setHorizontalLabelsVisible(true);
+            gridLabelRenderer.setNumHorizontalLabels(8);
             LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[]{
-                    new DataPoint(0, bitcoinValueList.get(0)),
-                    new DataPoint(1, bitcoinValueList.get(1)),
-                    new DataPoint(2, bitcoinValueList.get(2)),
-                    new DataPoint(3, bitcoinValueList.get(3)),
-                    new DataPoint(4, bitcoinValueList.get(4)),
-                    new DataPoint(5, bitcoinValueList.get(5)),
-                    new DataPoint(6, bitcoinValueList.get(6)),
-                    new DataPoint(7, bitcoinValueList.get(7))
+                    new DataPoint(d1, bitcoinValueList.get(0)),
+                    new DataPoint(d2, bitcoinValueList.get(1)),
+                    new DataPoint(d3, bitcoinValueList.get(2)),
+                    new DataPoint(d4, bitcoinValueList.get(3)),
+                    new DataPoint(d5, bitcoinValueList.get(4)),
+                    new DataPoint(d6, bitcoinValueList.get(5)),
+                    new DataPoint(d7, bitcoinValueList.get(6)),
+                    new DataPoint(d8, bitcoinValueList.get(7))
             });
             homeGraph.addSeries(series);
             series.setColor(Color.rgb(30, 197, 3));
             homeGraph.getGridLabelRenderer().setGridColor(Color.rgb(110, 143, 128));
             homeGraph.getGridLabelRenderer().setVerticalLabelsColor(Color.rgb(110, 143, 128));
             homeGraph.getGridLabelRenderer().setHorizontalLabelsColor(Color.rgb(110, 143, 128));
+            homeGraph.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(UserAreaActivity.this));
+            homeGraph.getGridLabelRenderer().setNumHorizontalLabels(8);
+            homeGraph.getViewport().setMinX(d1.getTime());
+            homeGraph.getViewport().setMaxX(d8.getTime());
+            homeGraph.getViewport().setXAxisBoundsManual(true);
+
         }
     }
 }
