@@ -57,6 +57,8 @@ public class UserAreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
 
+        //final TextView tvCoinVal = (TextView) findViewById(R.id.tvCoinVal);
+
         menuDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         menuToggle = new ActionBarDrawerToggle(this, menuDrawerLayout, R.string.open, R.string.close);
 
@@ -151,6 +153,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... arg0) {
+
             HttpHandler sh1 = new HttpHandler();
             // Making a request to url and getting response
             String historicUrl = "https://api.coindesk.com/v1/bpi/historical/close.json";
@@ -225,7 +228,6 @@ public class UserAreaActivity extends AppCompatActivity {
                     //JSONObject jsonBPI = jsonTime.getJSONObject("bpi");
                     JSONObject jsonUSD = jsonBPI.getJSONObject("USD");
                     bitcoinValueList.add(jsonUSD.getDouble("rate_float"));
-
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
                     runOnUiThread(new Runnable() {
@@ -238,7 +240,6 @@ public class UserAreaActivity extends AppCompatActivity {
                     });
 
                 }
-
             } else {
                 Log.e(TAG, "Couldn't get json from server.");
                 runOnUiThread(new Runnable() {
@@ -257,6 +258,9 @@ public class UserAreaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
+            
+            final TextView tvCoinVal = (TextView) findViewById(R.id.tvCoinVal);
+            tvCoinVal.setText(bitcoinValueList.get(7)+" USD");
 
             Calendar calendar = Calendar.getInstance();
             Date d1 = calendar.getTime();

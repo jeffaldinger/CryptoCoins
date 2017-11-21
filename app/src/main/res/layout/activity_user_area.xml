@@ -40,18 +40,18 @@
             android:id="@+id/tvTextBalance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/guideline"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="101dp"
+            android:layout_marginTop="19dp"
             android:text="Balance:"
             android:textColor="#1ec503"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_below="@+id/tvCoinVal"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:id="@+id/balanceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="34dp"
             android:textColor="#1ec503"
             android:textSize="36sp"
             android:text="0.00 USD"
@@ -62,12 +62,36 @@
             android:id="@+id/buttonWallet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/balanceValue"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
             android:textColor="#06F000"
             android:background="#373B41"
-            android:text="Wallet" />
+            android:text="Wallet"
+            android:layout_alignTop="@+id/balanceValue"
+            android:layout_alignRight="@+id/homeGraph"
+            android:layout_alignEnd="@+id/homeGraph"
+            android:layout_marginRight="11dp"
+            android:layout_marginEnd="11dp" />
+
+        <TextView
+            android:id="@+id/tvCoinVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="loading..."
+            android:textColor="#1ec503"
+            android:textSize="36sp"
+            android:layout_below="@+id/tvValTitle"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvValTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Bitcoin Value:"
+            android:textSize="20sp"
+            android:textColor="#1ec503"
+            android:layout_below="@+id/guideline"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
     <android.support.design.widget.NavigationView
