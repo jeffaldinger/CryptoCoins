@@ -4,7 +4,7 @@
     android:id="@+id/IdPoP"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent">
+    android:background="@android:color/darker_gray">
 
     <TextView
         android:id="@+id/poptext"
@@ -16,6 +16,6 @@
         android:layout_marginLeft="142dp"
         android:layout_marginStart="142dp"
         android:layout_marginTop="200dp"
-        android:text="POPUP"
+        android:text="Wallet ID"
         android:textSize="30sp" />
 </RelativeLayout>
