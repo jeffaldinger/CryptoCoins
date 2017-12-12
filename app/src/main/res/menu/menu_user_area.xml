@@ -5,8 +5,13 @@
 
 
     <item
+        android:id="@+id/menu_wallet"
+        android:icon="@android:drawable/ic_lock_idle_lock"
+        android:title="Wallet" />
+    <item
         android:id="@+id/menu_news"
-        android:title="Crypto News"/>
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="Crypto News" />
     <item
         android:id="@+id/menu_settings"
         android:icon="@drawable/ic_settings_black_24dp"
@@ -17,7 +22,8 @@
         android:title="About Us"/>
     <item
         android:id="@+id/menu_terms"
-        android:title="Terms of Service"/>
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Terms of Service" />
     <item
         android:id="@+id/menu_logout"
         android:title="Log Out"/>

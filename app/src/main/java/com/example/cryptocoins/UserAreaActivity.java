@@ -91,6 +91,10 @@ public class UserAreaActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
+                    case (R.id.menu_wallet):
+                        Intent walletActivity = new Intent(getApplicationContext(),WalletActivity.class);
+                        startActivity(walletActivity);
+                        break;
                     case (R.id.menu_news):
                         Intent newsActivity = new Intent(getApplicationContext(),RelatedNewsActivity.class);
                         startActivity(newsActivity);
