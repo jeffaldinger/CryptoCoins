@@ -26,6 +26,7 @@
             android:theme="@style/AppTheme.Popup" />
         <activity android:name=".UserAreaActivity" />
         <activity android:name=".AboutUs" />
+        <activity android:name=".RelatedNewsActivity"/>
         <activity android:name=".SettingsArea" />
         <activity android:name=".Pop" />
         <activity android:name=".WalletActivity" android:parentActivityName=".UserAreaActivity" > </activity>

@@ -91,6 +91,10 @@ public class UserAreaActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
+                    case (R.id.menu_news):
+                        Intent newsActivity = new Intent(getApplicationContext(),RelatedNewsActivity.class);
+                        startActivity(newsActivity);
+                        break;
                     case (R.id.menu_settings):
                         Intent settingsActivity = new Intent(getApplicationContext(), SettingsArea.class);
                         startActivity(settingsActivity);
@@ -103,6 +107,7 @@ public class UserAreaActivity extends AppCompatActivity {
                         Intent termsActivity = new Intent(getApplicationContext(), TermsOfService.class);
                         startActivity(termsActivity);
                         break;
+
                     case (R.id.menu_logout):
                         Intent logoutActivity = new Intent(getApplicationContext(), LoginActivity.class);
                         startActivity(logoutActivity);
@@ -111,24 +116,7 @@ public class UserAreaActivity extends AppCompatActivity {
                 return true;
             }
         });
-        /*
-        GraphView homeGraph = (GraphView) findViewById(R.id.homeGraph);
-        GridLabelRenderer gridLabelRenderer = homeGraph.getGridLabelRenderer();
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, day1),
-                new DataPoint(1, day2),
-                new DataPoint(2, day3),
-                new DataPoint(3, day4),
-                new DataPoint(4, day5),
-                new DataPoint(5, day6),
-                new DataPoint(6, day7)
-        });
-        homeGraph.addSeries(series);
-        series.setColor(Color.rgb(30, 197, 3));
-        homeGraph.getGridLabelRenderer().setGridColor(Color.rgb(110,143,128));
-        homeGraph.getGridLabelRenderer().setVerticalLabelsColor(Color.rgb(110,143,128));
-        homeGraph.getGridLabelRenderer().setHorizontalLabelsColor(Color.rgb(110,143,128));
-        */
+
     }
 
     @Override
@@ -263,20 +251,21 @@ public class UserAreaActivity extends AppCompatActivity {
             tvCoinVal.setText(bitcoinValueList.get(7)+" USD");
 
             Calendar calendar = Calendar.getInstance();
+            calendar.add(Calendar.DAY_OF_MONTH, -7);
             Date d1 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d2 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d3 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d4 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d5 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d6 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d7 = calendar.getTime();
-            calendar.add(Calendar.DATE, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
             Date d8 = calendar.getTime();
 
             GraphView homeGraph = (GraphView) findViewById(R.id.homeGraph);
