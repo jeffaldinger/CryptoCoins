@@ -69,20 +69,8 @@ public class UserAreaActivity extends AppCompatActivity {
 
         new GetBitcoinValues().execute();
         //
-        Button toWallet = (Button) findViewById(R.id.buttonWallet);
-        toWallet.setOnClickListener(new View.OnClickListener() {
-
-        //
-
-            @Override
-            public void onClick(View view) {
-
-                Intent walletIntent = new Intent(UserAreaActivity.this, WalletActivity.class);
-                startActivity(walletIntent);
-            }
 
 
-        });
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
